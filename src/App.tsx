@@ -7,21 +7,17 @@ import {
 } from "react-router-dom";
 
 import Home from "./Pages/Home/Home.tsx";
-import Header from "./Components/Header/Header.tsx";
-import Footer from "./Components/Footer/Footer.tsx";
+import Destination from "./Pages/Destination/Destionation.tsx";
 
 function App() {
   return (
     <Router>
       <>
-        <Header />
-
         <Routes>
           <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/destination" element={<Destination />} />
         </Routes>
-
-        <Footer />
       </>
     </Router>
   );

@@ -1,0 +1,50 @@
+.home {
+  background-image: url(../../assets/home-mob.jpg);
+  background-repeat: no-repeat;
+  text-align: center;
+  color: #d0d6f9;
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+.home h3 {
+  padding: 100px 0px 0;
+  font-weight: 100;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 16px;
+  margin-bottom: -30px;
+}
+.home h1 {
+  font-family: "Bellefair", serif;
+  color: #ffffff;
+  font-size: 80px;
+  font-weight: 100;
+}
+
+.explore {
+  background-color: white;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Bellefair", serif;
+  margin: auto;
+  color: #0b0d17;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 100px;
+  letter-spacing: 1.25px;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.home p {
+  width: 80%;
+  margin: auto;
+  line-height: 36px;
+}

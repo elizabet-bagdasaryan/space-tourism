@@ -1,10 +1,9 @@
-import "./Home.css";
-import Header from "../../Components/Header/Header";
-function Home() {
+import "./Destination.css";
+
+function Destination() {
   return (
-    <body className="home">
-      <Header />
-      <h3>SO, YOU WANT TO TRAVEL TO</h3>
+    <div className="destination">
+      <h3>SO, YOU WANT TO TRAVEL</h3>
       <h1>SPACE</h1>
       <p>
         Let’s face it; if you want to go to space, you might as well genuinely
@@ -15,8 +14,8 @@ function Home() {
       <div className="explore">
         <p>EXPLORE</p>
       </div>
-    </body>
+    </div>
   );
 }
 
-export default Home;
+export default Destination;
