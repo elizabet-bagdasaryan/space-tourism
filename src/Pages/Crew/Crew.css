@@ -69,6 +69,10 @@
 .tab {
   display: none;
 }
+.navbar-crew div.chosen {
+  opacity: 1;
+  cursor: pointer;
+}
 @media (min-width: 768px) {
   .crew h3 {
     color: white;
@@ -87,8 +91,7 @@
 
   .rez-tab {
     display: block;
-    /* width: 450px;
-    margin: auto; */
+
     position: absolute;
     bottom: 0;
 
@@ -115,10 +118,37 @@
   .crew-wrap {
     display: flex;
     text-align: start;
+    padding: 5vw 0 0 10vw;
   }
   .rez-tab {
-    width: 42vw;
-    height: 42vw;
+    width: 600px;
+    height: 700px;
     left: 75%;
+  }
+  .crew h3 {
+    padding-left: 0;
+    font-size: 32px;
+  }
+  .crew-text {
+    margin: 0;
+    font-size: 22px;
+    width: 36%;
+    line-height: 38px;
+  }
+  .crew h1 {
+    font-size: 58px;
+  }
+  .tab {
+    justify-content: start;
+    margin-top: 100px;
+  }
+  .tab div {
+    height: 22px;
+    width: 22px;
+    margin-right: 20px;
+  }
+  .navbar-crew div:hover {
+    opacity: 0.5;
+    cursor: pointer;
   }
 }

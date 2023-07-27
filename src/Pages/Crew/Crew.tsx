@@ -1,8 +1,13 @@
 import "./Crew.css";
 import Header from "../../Components/Header/Header";
-import Revaza from "../../assets/revaza.png";
 import Rev from "../../assets/revaz.png";
+import { useState } from "react";
 function Crew() {
+  const [clickedDot, setClickedDot] = useState(-1);
+
+  function handleDots(dotIndex: number) {
+    setClickedDot(dotIndex);
+  }
   return (
     <body className="crew">
       <Header />
@@ -14,10 +19,22 @@ function Crew() {
           <img src={Rev} className="rez-mob"></img>
           <hr className="line" />
           <div className="navbar-crew mob">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div
+              onClick={() => handleDots(0)}
+              className={clickedDot === 0 ? "chosen" : ""}
+            ></div>
+            <div
+              onClick={() => handleDots(1)}
+              className={clickedDot === 1 ? "chosen" : ""}
+            ></div>
+            <div
+              onClick={() => handleDots(2)}
+              className={clickedDot === 2 ? "chosen" : ""}
+            ></div>
+            <div
+              onClick={() => handleDots(3)}
+              className={clickedDot === 3 ? "chosen" : ""}
+            ></div>
           </div>
           <h2>commander</h2>
           <h1>Douglas Hurley</h1>
@@ -27,10 +44,22 @@ function Crew() {
             third time as commander of Crew Dragon Demo-2.
           </p>
           <div className="navbar-crew tab">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div
+              onClick={() => handleDots(0)}
+              className={clickedDot === 0 ? "chosen" : ""}
+            ></div>
+            <div
+              onClick={() => handleDots(1)}
+              className={clickedDot === 1 ? "chosen" : ""}
+            ></div>
+            <div
+              onClick={() => handleDots(2)}
+              className={clickedDot === 2 ? "chosen" : ""}
+            ></div>
+            <div
+              onClick={() => handleDots(3)}
+              className={clickedDot === 3 ? "chosen" : ""}
+            ></div>
           </div>
         </div>
         <div>

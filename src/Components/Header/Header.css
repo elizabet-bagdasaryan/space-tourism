@@ -95,6 +95,10 @@
     text-transform: uppercase;
     display: flex;
   }
+  .navbar p.click {
+    padding-bottom: 10px;
+    border-bottom: 3px solid white;
+  }
   .navbar p p {
     display: none;
   }
@@ -110,5 +114,10 @@
   .navbar p p {
     display: block;
     font-weight: 600;
+  }
+
+  .navbar p:hover {
+    padding-bottom: 10px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.507);
   }
 }

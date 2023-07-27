@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 function Header() {
   const [menuVisible, setMenuVisible] = useState(false);
+  const [clickedPage, setClickedPage] = useState(-1);
 
   function handleMenuVisibility() {
     setMenuVisible((prevState) => !prevState);
@@ -22,6 +23,9 @@ function Header() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  function handlePages(pageIndex: number) {
+    setClickedPage(pageIndex);
+  }
   return (
     <div className="header-wrap">
       <div className="header">
@@ -36,25 +40,38 @@ function Header() {
 
         <div className="navbar">
           <Link to="/home">
-            <p>
+            <p
+              onClick={() => handlePages(0)}
+              className={clickedPage === 0 ? "click" : ""}
+            >
               {" "}
-              <p>00</p>Home
+              <p>00</p>
+              Home
             </p>
           </Link>
           <Link to="/destination">
-            <p>
+            <p
+              onClick={() => handlePages(1)}
+              className={clickedPage === 1 ? "click" : ""}
+            >
               {" "}
               <p>01</p>Destination
             </p>
           </Link>
           <Link to="/crew">
-            <p>
+            <p
+              onClick={() => handlePages(2)}
+              className={clickedPage === 2 ? "click" : ""}
+            >
               {" "}
               <p>02</p>Crew
             </p>
           </Link>
           <Link to="/technology">
-            <p>
+            <p
+              onClick={() => handlePages(3)}
+              className={clickedPage === 3 ? "click" : ""}
+            >
               {" "}
               <p>03</p>Technology
             </p>

@@ -1,7 +1,13 @@
 import "./Destination.css";
 import Header from "../../Components/Header/Header";
 import Moon from "../../assets/moon.png";
+import { useState } from "react";
 function Destination() {
+  const [clickedDest, setClickedDest] = useState(-1);
+
+  function handleDestination(destIndex: number) {
+    setClickedDest(destIndex);
+  }
   return (
     <body className="destination">
       <Header />
@@ -14,10 +20,30 @@ function Destination() {
         </div>
         <div className="dest-info">
           <div className="navbar-destination">
-            <p>MOON</p>
-            <p>MARS</p>
-            <p>EUROPA</p>
-            <p>TITAN</p>
+            <p
+              onClick={() => handleDestination(0)}
+              className={clickedDest === 0 ? "clicked" : ""}
+            >
+              MOON
+            </p>
+            <p
+              onClick={() => handleDestination(1)}
+              className={clickedDest === 1 ? "clicked" : ""}
+            >
+              MARS
+            </p>
+            <p
+              onClick={() => handleDestination(2)}
+              className={clickedDest === 2 ? "clicked" : ""}
+            >
+              EUROPA
+            </p>
+            <p
+              onClick={() => handleDestination(3)}
+              className={clickedDest === 3 ? "clicked" : ""}
+            >
+              TITAN
+            </p>
           </div>
           <h1>MOON</h1>
           <p className="text-dest">

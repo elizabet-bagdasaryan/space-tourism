@@ -29,6 +29,13 @@
 
 .navbar-destination p {
   margin: 40px 13px 30px;
+  cursor: pointer;
+}
+
+.navbar-destination p.clicked {
+  color: white;
+  padding-bottom: 5px;
+  border-bottom: 3px solid white;
 }
 
 .destination h1 {
@@ -145,5 +152,10 @@ hr {
   }
   .statistics div p:nth-child(2) {
     font-size: 32px;
+  }
+
+  .navbar-destination p:hover {
+    padding-bottom: 5px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.502);
   }
 }
