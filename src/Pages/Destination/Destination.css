@@ -6,7 +6,6 @@
   background-size: cover;
   height: 100vh 100vw;
   margin: 0;
-  padding: 30px;
 }
 
 .destination h3 {
@@ -57,11 +56,15 @@ hr {
 .statistics div {
   margin-bottom: 50px;
 }
+.destination-divs {
+  padding: 30px;
+}
 
 @media (min-width: 768px) {
   .destination h3 {
     justify-content: start;
     margin: 50px 30px;
+    letter-spacing: 3px;
   }
   .statistics {
     display: flex;

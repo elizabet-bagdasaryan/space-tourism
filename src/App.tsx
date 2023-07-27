@@ -8,6 +8,7 @@ import {
 
 import Home from "./Pages/Home/Home.tsx";
 import Destination from "./Pages/Destination/Destionation.tsx";
+import Crew from "./Pages/Crew/Crew.tsx";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/home" element={<Home />} />
           <Route path="/destination" element={<Destination />} />
+          <Route path="/crew" element={<Crew />} />
         </Routes>
       </>
     </Router>
