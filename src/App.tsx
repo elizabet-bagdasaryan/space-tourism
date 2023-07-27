@@ -9,6 +9,7 @@ import {
 import Home from "./Pages/Home/Home.tsx";
 import Destination from "./Pages/Destination/Destionation.tsx";
 import Crew from "./Pages/Crew/Crew.tsx";
+import Technology from "./Pages/Technology/Technology.tsx";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/destination" element={<Destination />} />
           <Route path="/crew" element={<Crew />} />
+          <Route path="/technology" element={<Technology />} />
         </Routes>
       </>
     </Router>
