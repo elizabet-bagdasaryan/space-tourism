@@ -96,19 +96,51 @@ hr {
 
   .text-dest {
     margin: inherit;
+    font-size: 18px;
+    line-height: 34px;
+    width: 100%;
   }
   .navbar-destination {
     justify-content: start;
+    font-size: 20px;
+  }
+  .navbar-destination p {
+    margin-right: 40px;
   }
   hr {
     margin: inherit;
   }
-  .statistics {
-    justify-content: start;
+
+  .dest-info {
+    width: 45%;
+    margin-top: 60px;
   }
   .destination-divs {
     display: flex;
     padding: 0 10vw;
+    margin-top: 6vw;
     justify-content: space-between;
+  }
+  .destination h3 {
+    font-size: 28px;
+  }
+  img {
+    width: 445px;
+    height: 445px;
+  }
+  .statistics {
+    justify-content: start;
+  }
+  .statistics div {
+    margin: 30px 80px 0 0;
+  }
+
+  .destination h1 {
+    font-size: 120px;
+    letter-spacing: 10px;
+    margin: 10px 0;
+  }
+  .statistics div p:nth-child(2) {
+    font-size: 32px;
   }
 }

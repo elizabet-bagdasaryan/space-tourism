@@ -12,7 +12,7 @@ function Destination() {
           </h3>
           <img src={Moon}></img>
         </div>
-        <div>
+        <div className="dest-info">
           <div className="navbar-destination">
             <p>MOON</p>
             <p>MARS</p>
