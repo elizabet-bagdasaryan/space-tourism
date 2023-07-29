@@ -1,13 +1,57 @@
 import "./Crew.css";
 import Header from "../../Components/Header/Header";
 import Rev from "../../assets/revaz.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
+interface Crew {
+  name: string;
+  images: {
+    png: string;
+    webp: string;
+  };
+  role: string;
+  bio: string;
+}
 function Crew() {
-  const [clickedDot, setClickedDot] = useState(-1);
+  const [clickedDot, setClickedDot] = useState(0);
 
   function handleDots(dotIndex: number) {
     setClickedDot(dotIndex);
   }
+
+  const [crewInfo, setCrewInfo] = useState<Crew | null>(null);
+
+  const handleCrewClick = async (memberName: string) => {
+    try {
+      const response = await axios.get(
+        `http://localhost:3000/crew/${memberName}`
+      );
+      setCrewInfo(response.data.crew);
+    } catch (error) {
+      console.error("Error fetching  info:", error);
+      setCrewInfo(null);
+    }
+  };
+
+  useEffect(() => {
+    const fetchFirstCrew = async () => {
+      try {
+        const response = await axios.get(
+          "http://localhost:3000/crew/Douglas Hurley"
+        );
+        setCrewInfo(response.data.crew);
+      } catch (error) {
+        console.error("Error fetching first ", error);
+        setCrewInfo(null);
+      }
+    };
+
+    fetchFirstCrew();
+  }, []);
+  const handleDotClick = (dotIndex: number, memberName: string) => {
+    handleDots(dotIndex);
+    handleCrewClick(memberName);
+  };
   return (
     <body className="crew">
       <Header />
@@ -20,44 +64,40 @@ function Crew() {
           <hr className="line" />
           <div className="navbar-crew mob">
             <div
-              onClick={() => handleDots(0)}
+              onClick={() => handleDotClick(0, "Douglas Hurley")}
               className={clickedDot === 0 ? "chosen" : ""}
             ></div>
             <div
-              onClick={() => handleDots(1)}
+              onClick={() => handleDotClick(1, "Mark Shuttleworth")}
               className={clickedDot === 1 ? "chosen" : ""}
             ></div>
             <div
-              onClick={() => handleDots(2)}
+              onClick={() => handleDotClick(2, "Victor Glover")}
               className={clickedDot === 2 ? "chosen" : ""}
             ></div>
             <div
-              onClick={() => handleDots(3)}
+              onClick={() => handleDotClick(3, "Anousheh Ansari")}
               className={clickedDot === 3 ? "chosen" : ""}
             ></div>
           </div>
-          <h2>commander</h2>
-          <h1>Douglas Hurley</h1>
-          <p className="crew-text">
-            Douglas Gerald Hurley is an American engineer, former Marine Corps
-            pilot and former NASA astronaut. He launched into space for the
-            third time as commander of Crew Dragon Demo-2.
-          </p>
+          <h2>{crewInfo?.role}</h2>
+          <h1>{crewInfo?.name}</h1>
+          <p className="crew-text">{crewInfo?.bio}</p>
           <div className="navbar-crew tab">
             <div
-              onClick={() => handleDots(0)}
+              onClick={() => handleDotClick(0, "Douglas Hurley")}
               className={clickedDot === 0 ? "chosen" : ""}
             ></div>
             <div
-              onClick={() => handleDots(1)}
+              onClick={() => handleDotClick(1, "Mark Shuttleworth")}
               className={clickedDot === 1 ? "chosen" : ""}
             ></div>
             <div
-              onClick={() => handleDots(2)}
+              onClick={() => handleDotClick(2, "Victor Glover")}
               className={clickedDot === 2 ? "chosen" : ""}
             ></div>
             <div
-              onClick={() => handleDots(3)}
+              onClick={() => handleDotClick(3, "Anousheh Ansari")}
               className={clickedDot === 3 ? "chosen" : ""}
             ></div>
           </div>

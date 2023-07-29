@@ -1,13 +1,62 @@
 import "./Destination.css";
 import Header from "../../Components/Header/Header";
 import Moon from "../../assets/moon.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
+
+interface Destination {
+  name: string;
+  images: {
+    png: string;
+    webp: string;
+  };
+  description: string;
+  distance: string;
+  travel: string;
+}
 function Destination() {
-  const [clickedDest, setClickedDest] = useState(-1);
+  const [clickedDest, setClickedDest] = useState(0);
 
   function handleDestination(destIndex: number) {
     setClickedDest(destIndex);
   }
+
+  const [destinationInfo, setDestinationInfo] = useState<Destination | null>(
+    null
+  );
+
+  const handleDestinationClick = async (destinationName: string) => {
+    try {
+      const response = await axios.get(
+        `http://localhost:3000/destination/${destinationName}`
+      );
+      setDestinationInfo(response.data.destination);
+    } catch (error) {
+      console.error("Error fetching info:", error);
+      setDestinationInfo(null);
+    }
+  };
+  useEffect(() => {
+    const fetchFirstDestination = async () => {
+      try {
+        const response = await axios.get(
+          "http://localhost:3000/destination/Moon"
+        );
+        setDestinationInfo(response.data.destination);
+      } catch (error) {
+        console.error("Error fetching first ", error);
+        setDestinationInfo(null);
+      }
+    };
+
+    fetchFirstDestination();
+  }, []);
+
+  const handleElementClick = (destIndex: number, destinationName: string) => {
+    handleDestination(destIndex);
+    handleDestinationClick(destinationName);
+  };
+
   return (
     <body className="destination">
       <Header />
@@ -21,46 +70,41 @@ function Destination() {
         <div className="dest-info">
           <div className="navbar-destination">
             <p
-              onClick={() => handleDestination(0)}
+              onClick={() => handleElementClick(0, "Moon")}
               className={clickedDest === 0 ? "clicked" : ""}
             >
               MOON
             </p>
             <p
-              onClick={() => handleDestination(1)}
+              onClick={() => handleElementClick(1, "Mars")}
               className={clickedDest === 1 ? "clicked" : ""}
             >
               MARS
             </p>
             <p
-              onClick={() => handleDestination(2)}
+              onClick={() => handleElementClick(2, "Europa")}
               className={clickedDest === 2 ? "clicked" : ""}
             >
               EUROPA
             </p>
             <p
-              onClick={() => handleDestination(3)}
+              onClick={() => handleElementClick(3, "Titan")}
               className={clickedDest === 3 ? "clicked" : ""}
             >
               TITAN
             </p>
           </div>
-          <h1>MOON</h1>
-          <p className="text-dest">
-            See our planet as you’ve never seen it before. A perfect relaxing
-            trip away to help regain perspective and come back refreshed. While
-            you’re there, take in some history by visiting the Luna 2 and Apollo
-            11 landing sites.
-          </p>
+          <h1>{destinationInfo?.name}</h1>
+          <p className="text-dest">{destinationInfo?.description}</p>
           <hr />
           <div className="statistics">
             <div>
               <p>AVG. DISTANCE</p>
-              <p>384,400 km</p>
+              <p>{destinationInfo?.distance}</p>
             </div>
             <div>
               <p>EST. TRAVEL TIME</p>
-              <p>3 DAYS</p>
+              <p>{destinationInfo?.travel}</p>
             </div>
           </div>
         </div>
