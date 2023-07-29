@@ -13,6 +13,46 @@ interface Technology {
   description: string;
 }
 function Technology() {
+  const [clickedCircle, setClickedCircle] = useState(0);
+
+  function handleCircles(circleIndex: number) {
+    setClickedCircle(circleIndex);
+  }
+
+  const [techInfo, setTechInfo] = useState<Technology | null>(null);
+
+  const handleTechClick = async (techName: string) => {
+    try {
+      const response = await axios.get(
+        `http://localhost:3000/technology/${techName}`
+      );
+      setTechInfo(response.data.technology);
+    } catch (error) {
+      console.error("Error fetching  info:", error);
+      setTechInfo(null);
+    }
+  };
+
+  useEffect(() => {
+    const fetchFirstTech = async () => {
+      try {
+        const response = await axios.get(
+          "http://localhost:3000/technology/Launch vehicle"
+        );
+        setTechInfo(response.data.technology);
+      } catch (error) {
+        console.error("Error fetching first ", error);
+        setTechInfo(null);
+      }
+    };
+
+    fetchFirstTech();
+  }, []);
+
+  const handleCircleClick = (circleIndex: number, techName: string) => {
+    handleCircles(circleIndex);
+    handleTechClick(techName);
+  };
   return (
     <body className="technologies crew">
       <Header />
