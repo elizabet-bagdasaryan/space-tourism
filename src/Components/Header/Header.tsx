@@ -40,41 +40,44 @@ function Header() {
 
         <div className="navbar">
           <Link to="/home">
-            <p
+            <div
               onClick={() => handlePages(0)}
               className={clickedPage === 0 ? "click" : ""}
             >
               {" "}
               <p>00</p>
-              Home
-            </p>
+              <p>Home</p>
+            </div>
           </Link>
           <Link to="/destination">
-            <p
+            <div
               onClick={() => handlePages(1)}
               className={clickedPage === 1 ? "click" : ""}
             >
               {" "}
-              <p>01</p>Destination
-            </p>
+              <p>01</p>
+              <p>Destination</p>
+            </div>
           </Link>
           <Link to="/crew">
-            <p
+            <div
               onClick={() => handlePages(2)}
               className={clickedPage === 2 ? "click" : ""}
             >
               {" "}
-              <p>02</p>Crew
-            </p>
+              <p>02</p>
+              <p>Crew</p>
+            </div>
           </Link>
           <Link to="/technology">
-            <p
+            <div
               onClick={() => handlePages(3)}
               className={clickedPage === 3 ? "click" : ""}
             >
               {" "}
-              <p>03</p>Technology
-            </p>
+              <p>03</p>
+              <p>Technology</p>
+            </div>
           </Link>
         </div>
       </div>
@@ -82,27 +85,27 @@ function Header() {
       <div className={`menu-mobile ${menuVisible ? "visible" : ""}`}>
         <img src={Cross} onClick={handleMenuVisibility} className="cross"></img>
         <Link to="/home">
-          <p>
+          <div>
             <b> 00</b> Home{" "}
-          </p>
+          </div>
         </Link>
         <Link to="/destination">
-          <p>
+          <div>
             {" "}
             <b> 01</b> Destination{" "}
-          </p>
+          </div>
         </Link>
         <Link to="/crew">
-          <p>
+          <div>
             {" "}
             <b> 02</b> Crew{" "}
-          </p>
+          </div>
         </Link>
         <Link to="/technology">
-          <p>
+          <div>
             {" "}
             <b> 03</b> Technology{" "}
-          </p>
+          </div>
         </Link>
       </div>
     </div>

@@ -11,7 +11,7 @@
   display: none;
 }
 
-.menu-mobile p {
+.menu-mobile div {
   text-align: start;
   margin: 32px 0;
   font-size: 16px;
@@ -89,17 +89,17 @@
     padding: 40px 30px;
     justify-content: space-evenly;
   }
-  .navbar p {
+  .navbar div {
     color: #fff;
     margin: 0 20px;
     text-transform: uppercase;
     display: flex;
   }
-  .navbar p.click {
+  .navbar div.click {
     padding-bottom: 10px;
     border-bottom: 3px solid white;
   }
-  .navbar p p {
+  .navbar div p:nth-child(1) {
     display: none;
   }
 }
@@ -108,15 +108,15 @@
   .header {
     padding: 50px 0 50px 50px;
   }
-  .navbar p {
+  .navbar div {
     font-size: 18px;
   }
-  .navbar p p {
+  .navbar div p:nth-child(1) {
     display: block;
     font-weight: 600;
   }
 
-  .navbar p:hover {
+  .navbar div:hover {
     padding-bottom: 10px;
     border-bottom: 3px solid rgba(255, 255, 255, 0.507);
   }
