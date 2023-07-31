@@ -6,7 +6,7 @@
   background-size: cover;
   height: 100vh;
   margin: 0;
-  padding: 0;
+  /* padding: 0; */
 }
 .home h3 {
   padding: 100px 0px 0;
@@ -49,6 +49,9 @@
   line-height: 36px;
 }
 
+.home .header p {
+  margin: inherit;
+}
 @media (min-width: 768px) {
   .home {
     background-image: url(../../assets/home-tab.png);

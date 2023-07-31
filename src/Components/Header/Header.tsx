@@ -29,7 +29,7 @@ function Header() {
   return (
     <div className="header-wrap">
       <div className="header">
-        <Link to="/home">
+        <Link to="/home" style={{ textDecoration: "none" }}>
           <img src={Logo} className="logo" />
         </Link>
         <img
@@ -39,7 +39,7 @@ function Header() {
         />
 
         <div className="navbar">
-          <Link to="/home">
+          <Link to="/home" style={{ textDecoration: "none" }}>
             <div
               onClick={() => handlePages(0)}
               className={clickedPage === 0 ? "click" : ""}
@@ -49,7 +49,7 @@ function Header() {
               <p>Home</p>
             </div>
           </Link>
-          <Link to="/destination">
+          <Link to="/destination" style={{ textDecoration: "none" }}>
             <div
               onClick={() => handlePages(1)}
               className={clickedPage === 1 ? "click" : ""}
@@ -59,7 +59,7 @@ function Header() {
               <p>Destination</p>
             </div>
           </Link>
-          <Link to="/crew">
+          <Link to="/crew" style={{ textDecoration: "none" }}>
             <div
               onClick={() => handlePages(2)}
               className={clickedPage === 2 ? "click" : ""}
@@ -69,7 +69,7 @@ function Header() {
               <p>Crew</p>
             </div>
           </Link>
-          <Link to="/technology">
+          <Link to="/technology" style={{ textDecoration: "none" }}>
             <div
               onClick={() => handlePages(3)}
               className={clickedPage === 3 ? "click" : ""}
@@ -84,24 +84,24 @@ function Header() {
 
       <div className={`menu-mobile ${menuVisible ? "visible" : ""}`}>
         <img src={Cross} onClick={handleMenuVisibility} className="cross"></img>
-        <Link to="/home">
+        <Link to="/home" style={{ textDecoration: "none" }}>
           <div>
             <b> 00</b> Home{" "}
           </div>
         </Link>
-        <Link to="/destination">
+        <Link to="/destination" style={{ textDecoration: "none" }}>
           <div>
             {" "}
             <b> 01</b> Destination{" "}
           </div>
         </Link>
-        <Link to="/crew">
+        <Link to="/crew" style={{ textDecoration: "none" }}>
           <div>
             {" "}
             <b> 02</b> Crew{" "}
           </div>
         </Link>
-        <Link to="/technology">
+        <Link to="/technology" style={{ textDecoration: "none" }}>
           <div>
             {" "}
             <b> 03</b> Technology{" "}
