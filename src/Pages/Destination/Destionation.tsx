@@ -56,7 +56,7 @@ function Destination() {
     handleDestination(destIndex);
     handleDestinationClick(destinationName);
   };
-  console.log(destinationInfo?.images);
+
 
   return (
     <body className="destination">
@@ -66,7 +66,7 @@ function Destination() {
           <h3>
             <p>01</p>Pick your destination
           </h3>
-          <img src={destinationInfo?.images.png}></img>
+          <img src={"http://localhost:3000"+destinationInfo?.images.png}></img>
         </div>
         <div className="dest-info">
           <div className="navbar-destination">

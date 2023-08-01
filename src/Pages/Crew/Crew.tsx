@@ -60,7 +60,7 @@ function Crew() {
           <h3>
             <p>02</p>Meet your crew
           </h3>
-          <img src={Rev} className="rez-mob"></img>
+          <img src={"http://localhost:3000" + crewInfo?.images.png} className="rez-mob"></img>
           <hr className="line" />
           <div className="navbar-crew mob">
             <div
