@@ -103,7 +103,7 @@ function Crew() {
           </div>
         </div>
         <div>
-          <img src={Rev} className="rez-tab"></img>
+          <img src={"http://localhost:3000" + crewInfo?.images.png} className="rez-tab"></img>
         </div>
       </div>
     </body>
