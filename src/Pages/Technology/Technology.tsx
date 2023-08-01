@@ -7,8 +7,8 @@ import axios from "axios";
 interface Technology {
   name: string;
   images: {
-    png: string;
-    webp: string;
+    portrait: string;
+    landscape: string;
   };
   description: string;
 }
@@ -87,7 +87,7 @@ function Technology() {
           <h1>{techInfo?.name}</h1>
           <p className="crew-text tech-text">{techInfo?.description}</p>
         </div>
-        <img src={SpaceDesk} className="space-desk" />
+        <img src={"http://localhost:3000" + techInfo?.images.landscape} className="space-desk" />
       </div>
     </body>
   );

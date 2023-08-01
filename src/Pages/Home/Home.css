@@ -6,7 +6,7 @@
   background-size: cover;
   height: 100vh;
   margin: 0;
-  /* padding: 0; */
+
 }
 .home h3 {
   padding: 100px 0px 0;
@@ -69,11 +69,15 @@
     height: 242px;
     font-size: 32px;
   }
+ .home .navbar{
+  width:75%
+ }
 }
 
 @media (min-width: 1336px) {
   .home {
     background-image: url(../../assets/home-desk.jpg);
+
   }
 
   .home-divs {

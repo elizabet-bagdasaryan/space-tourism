@@ -69,6 +69,7 @@ hr {
 }
 
 @media (min-width: 768px) {
+
   .destination h3 {
     justify-content: start;
     margin: 50px 30px;
