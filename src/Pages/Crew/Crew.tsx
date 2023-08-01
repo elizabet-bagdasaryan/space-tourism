@@ -1,6 +1,5 @@
 import "./Crew.css";
 import Header from "../../Components/Header/Header";
-import Rev from "../../assets/revaz.png";
 import { useState, useEffect } from "react";
 import axios from "axios";
 interface Crew {

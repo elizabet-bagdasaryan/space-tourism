@@ -1,7 +1,5 @@
 import "./Technology.css";
 import Header from "../../Components/Header/Header";
-import Space from "../../assets/space.png";
-import SpaceDesk from "../../assets/space-desk.png";
 import { useState, useEffect } from "react";
 import axios from "axios";
 interface Technology {
@@ -60,7 +58,7 @@ function Technology() {
       <h3>
         <p>03</p>SPACE LAUNCH 101
       </h3>
-      <img src={Space} className="space-mob"></img>
+      <img src={"http://localhost:3000" + techInfo?.images.landscape} className="space-mob"></img>
       <div className="crew-wrap tech-wrap">
         <div className="navbar-tech mob">
           <div
@@ -87,7 +85,7 @@ function Technology() {
           <h1>{techInfo?.name}</h1>
           <p className="crew-text tech-text">{techInfo?.description}</p>
         </div>
-        <img src={"http://localhost:3000" + techInfo?.images.landscape} className="space-desk" />
+        <img src={"http://localhost:3000" + techInfo?.images.portrait} className="space-desk" />
       </div>
     </body>
   );

@@ -36,8 +36,8 @@
 }
 
 .rez-mob {
-  width: 334px;
-  height: 400px;
+  width: 260px;
+  height: 340px;
   margin: auto;
   margin-top: 20px;
 }
@@ -91,12 +91,12 @@
 
   .rez-tab {
     display: block;
-
     position: absolute;
     bottom: 0;
-
     left: 50%;
     transform: translate(-50%, 0%);
+    width:350px;
+    height:390px
   }
   .tab {
     display: flex;
@@ -122,7 +122,7 @@
   }
   .rez-tab {
     width: 600px;
-    height: 700px;
+    height: 720px;
     left: 75%;
   }
   .crew h3 {

@@ -1,6 +1,5 @@
 import "./Destination.css";
 import Header from "../../Components/Header/Header";
-import Moon from "../../assets/moon.png";
 import { useState, useEffect } from "react";
 import axios from "axios";
 

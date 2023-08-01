@@ -4,8 +4,9 @@
   text-align: center;
   color: #d0d6f9;
   background-size: cover;
-  height: 100vh;
+  height: 100vh 100vw;
   margin: 0;
+  padding-bottom:5vw
 }
 
 .destination h3 {
@@ -68,7 +69,16 @@ hr {
   padding: 30px;
 }
 
+.destination-divs img{
+  width:180px;
+  height:180px
+}
+
 @media (min-width: 768px) {
+  .destination-divs img{
+    width:300px;
+    height:300px
+  }
 
   .destination h3 {
     justify-content: start;
@@ -159,5 +169,10 @@ hr {
   .navbar-destination p:hover {
     padding-bottom: 5px;
     border-bottom: 3px solid rgba(255, 255, 255, 0.502);
+  }
+
+  .destination-divs img{
+    width:450px;
+    height:450px
   }
 }
