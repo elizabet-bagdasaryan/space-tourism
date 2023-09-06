@@ -1,130 +1,128 @@
 .home {
-  background-image: url(../../assets/home-mob.jpg);
-  background-repeat: no-repeat;
-  text-align: center;
-  color: #d0d6f9;
-  background-size: cover;
-  height: 100vh;
-  margin: 0;
-
+	background-image: url(../../assets/home-mob.jpg);
+	background-repeat: no-repeat;
+	text-align: center;
+	color: #d0d6f9;
+	background-size: cover;
+	height: 100vh;
+	margin: 0;
 }
 .home h3 {
-  padding: 100px 0px 0;
-  font-weight: 100;
-  font-family: "Barlow Condensed", sans-serif;
-  font-size: 16px;
-  margin-bottom: -30px;
+	padding: 100px 0px 0;
+	font-weight: 100;
+	font-family: "Barlow Condensed", sans-serif;
+	font-size: 16px;
+	margin-bottom: -30px;
 }
 .home h1 {
-  font-family: "Bellefair", serif;
-  color: #ffffff;
-  font-size: 80px;
-  font-weight: 100;
+	font-family: "Bellefair", serif;
+	color: #ffffff;
+	font-size: 80px;
+	font-weight: 100;
 }
 
 .explore {
-  background-color: white;
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Bellefair", serif;
-  margin: auto;
-  color: #0b0d17;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-bottom: 100px;
-  letter-spacing: 1.25px;
-  padding: 20px;
-  font-size: 20px;
+	background-color: white;
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "Bellefair", serif;
+	margin: auto;
+	color: #0b0d17;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-bottom: 100px;
+	letter-spacing: 1.25px;
+	padding: 20px;
+	font-size: 20px;
 }
 
 .home p {
-  width: 80%;
-  margin: auto;
-  line-height: 36px;
+	width: 80%;
+	margin: auto;
+	line-height: 36px;
 }
 
 .home .header p {
-  margin: inherit;
+	margin: inherit;
 }
 @media (min-width: 768px) {
-  .home {
-    background-image: url(../../assets/home-tab.png);
-  }
-  .home h1 {
-    font-size: 150px;
-    margin: 30px 0;
-  }
-  .home p {
-    width: 60%;
-  }
+	.home {
+		background-image: url(../../assets/home-tab.png);
+	}
+	.home h1 {
+		font-size: 150px;
+		margin: 30px 0;
+	}
+	.home p {
+		width: 60%;
+	}
 
-  .explore {
-    width: 242px;
-    height: 242px;
-    font-size: 32px;
-  }
- .navbar{
-  width:75%
- }
+	.explore {
+		width: 242px;
+		height: 242px;
+		font-size: 32px;
+	}
+	.navbar {
+		width: 75%;
+	}
 }
 
 @media (min-width: 1336px) {
-  .home {
-    background-image: url(../../assets/home-desk.jpg);
+	.home {
+		background-image: url(../../assets/home-desk.jpg);
+	}
 
-  }
+	.home-divs {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		text-align: start;
+		position: fixed;
+		bottom: 30%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	.home-divs div:nth-child(1) {
+		margin-left: 10vw;
+	}
+	.home-divs p:nth-child(1) {
+		margin: inherit;
+	}
+	.text p {
+		width: 560px;
+		font-size: 22px;
+		line-height: 40px;
+	}
+	.explore {
+		position: inherit;
+		right: 0;
+		width: 274px;
+		height: 274px;
+		margin: 0;
+		left: 75%;
+	}
 
-  .home-divs {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    text-align: start;
-    position: fixed;
-    bottom: 30%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .home-divs div:nth-child(1) {
-    margin-left: 10vw;
-  }
-  .home-divs p:nth-child(1) {
-    margin: inherit;
-  }
-  .text p {
-    width: 560px;
-    font-size: 22px;
-    line-height: 40px;
-  }
-  .explore {
-    position: inherit;
-    right: 0;
-    width: 274px;
-    height: 274px;
-    margin: 0;
-    left: 75%;
-  }
+	.explore::before {
+		content: "";
+		position: absolute;
+		top: -80px;
+		left: -80px;
+		right: -80px;
+		bottom: -80px;
+		border: 80px solid rgba(255, 255, 255, 0.2);
+		border-radius: 50%;
+		opacity: 0;
+		transition: opacity 0.3s;
+	}
 
-  .explore::before {
-    content: "";
-    position: absolute;
-    top: -80px;
-    left: -80px;
-    right: -80px;
-    bottom: -80px;
-    border: 80px solid rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-
-  .explore:hover::before {
-    opacity: 1;
-    cursor: pointer;
-  }
+	.explore:hover::before {
+		opacity: 1;
+		cursor: pointer;
+	}
 }

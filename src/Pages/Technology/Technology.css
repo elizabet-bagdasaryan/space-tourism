@@ -1,93 +1,93 @@
 .technologies {
-  background-image: url(../../assets/tech-mob.jpg);
-  background-repeat: no-repeat;
-  text-align: center;
-  color: #d0d6f9;
-  background-size: cover;
-  height: 100vh;
-  margin: 0;
+	background-image: url(../../assets/tech-mob.jpg);
+	background-repeat: no-repeat;
+	text-align: center;
+	color: #d0d6f9;
+	background-size: cover;
+	height: 100vh;
+	margin: 0;
 }
 
 .space-mob {
-  width: 100%;
+	width: 100%;
 }
 .space-desk {
-  display: none;
+	display: none;
 }
 
 .navbar-tech {
-  display: flex;
-  justify-content: center;
-  margin: 50px 0;
+	display: flex;
+	justify-content: center;
+	margin: 50px 0;
 }
 .navbar-tech div {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.26);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 20px;
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 1px solid rgba(255, 255, 255, 0.26);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 20px;
+	color: white;
+	font-size: 20px;
+	cursor: pointer;
 }
 
 .navbar-tech div.filled {
-  color: #0b0d17;
-  background-color: white;
-  border-color: white;
+	color: #0b0d17;
+	background-color: white;
+	border-color: white;
 }
 
 .technologies h2 {
-  color: #d0d6f9;
-  opacity: 1;
+	color: #d0d6f9;
+	opacity: 1;
 }
 
 @media (min-width: 1336px) {
-  .space-mob {
-    display: none;
-  }
-  .space-desk {
-    display: block;
-    width: 40%;
-    margin-top: -4vw;
-    height: 55vh;
-  }
+	.space-mob {
+		display: none;
+	}
+	.space-desk {
+		display: block;
+		width: 40%;
+		margin-top: -4vw;
+		height: 55vh;
+	}
 
-  .navbar-tech {
-    display: block;
-    margin-right: 100px;
-  }
-  .navbar-tech div {
-    margin: 50px 0;
-    width: 80px;
-    height: 80px;
-    font-size: 32px;
-    padding: 10px;
-  }
-  .tech-text {
-    width: 80%;
-    font-size: 18px;
-  }
+	.navbar-tech {
+		display: block;
+		margin-right: 100px;
+	}
+	.navbar-tech div {
+		margin: 50px 0;
+		width: 80px;
+		height: 80px;
+		font-size: 32px;
+		padding: 10px;
+	}
+	.tech-text {
+		width: 80%;
+		font-size: 18px;
+	}
 
-  .tech-info {
-    margin-top: 100px;
-  }
+	.tech-info {
+		margin-top: 100px;
+	}
 
-  .tech-wrap {
-    padding-left: 5vw;
-  }
-  .technologies h1 {
-    font-size: 50px;
-  }
+	.tech-wrap {
+		padding-left: 5vw;
+	}
+	.technologies h1 {
+		font-size: 50px;
+	}
 
-  .technologies h3 {
-    padding-left: 5vw;
-  }
+	.technologies h3 {
+		padding-left: 5vw;
+	}
 
-  .navbar-tech div:hover {
-    border-color: white;
-  }
+	.navbar-tech div:hover {
+		border-color: white;
+	}
 }

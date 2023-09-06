@@ -60,10 +60,7 @@ function Crew() {
 						<p>02</p>Meet your crew
 					</h3>
 					<img
-						src={
-							"https://space-tourism-backend-production.up.railway.app/public/img" +
-							crewInfo?.images.png
-						}
+						src={`https://space-tourism-backend-production.up.railway.app/img/${crewInfo?.images.png}`}
 						className="rez-mob"
 					></img>
 					<hr className="line" />
@@ -109,7 +106,10 @@ function Crew() {
 				</div>
 				<div>
 					<img
-						src={"http://localhost:3000" + crewInfo?.images.png}
+						src={
+							"https://space-tourism-backend-production.up.railway.app/public/images" +
+							crewInfo?.images.png
+						}
 						className="rez-tab"
 					></img>
 				</div>
