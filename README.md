@@ -42,4 +42,5 @@ Please ensure that your code follows the existing coding style and includes appr
 If you have any questions, suggestions, or issues regarding this application, please feel free to contact me at [elizabet.bagdasaryan1@gmail.com].
 
 Backend: https://github.com/elizabet-bagdasaryan/space-tourism-backend
+
 Project Link: https://github.com/elizabet-bagdasaryan/space-tourism
