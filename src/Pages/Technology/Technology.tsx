@@ -59,10 +59,7 @@ function Technology() {
 				<p>03</p>SPACE LAUNCH 101
 			</h3>
 			<img
-				src={
-					"https://space-tourism-backend-production.up.railway.app/" +
-					techInfo?.images.landscape
-				}
+				src={`https://space-tourism-backend-production.up.railway.app${techInfo?.images.landscape}`}
 				className="space-mob"
 			></img>
 			<div className="crew-wrap tech-wrap">
@@ -92,7 +89,7 @@ function Technology() {
 					<p className="crew-text tech-text">{techInfo?.description}</p>
 				</div>
 				<img
-					src={"http://localhost:3000" + techInfo?.images.portrait}
+					src={`https://space-tourism-backend-production.up.railway.app${techInfo?.images.portrait}`}
 					className="space-desk"
 				/>
 			</div>

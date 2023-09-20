@@ -65,7 +65,7 @@ function Destination() {
 						<p>01</p>Pick your destination
 					</h3>
 					<img
-						src={"http://localhost:3000" + destinationInfo?.images.png}
+						src={`https://space-tourism-backend-production.up.railway.app${destinationInfo?.images.png}`}
 					></img>
 				</div>
 				<div className="dest-info">
