@@ -46,6 +46,9 @@
 }
 
 @media (min-width: 1336px) {
+	.technologies {
+		height: 100%;
+	}
 	.space-mob {
 		display: none;
 	}

@@ -115,14 +115,17 @@
 }
 
 @media (min-width: 1336px) {
+	.crew {
+		height: 100%;
+	}
 	.crew-wrap {
 		display: flex;
 		text-align: start;
 		padding: 5vw 0 0 10vw;
 	}
 	.rez-tab {
-		width: 600px;
-		height: 720px;
+		width: 550px;
+		height: 680px;
 		left: 75%;
 	}
 	.crew h3 {

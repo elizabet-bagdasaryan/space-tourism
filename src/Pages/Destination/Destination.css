@@ -113,7 +113,7 @@ hr {
 	.destination {
 		background-image: url(../../assets/destination-desk.jpg);
 		text-align: start;
-		height: 100vh;
+		height: 100%;
 	}
 
 	.text-dest {
