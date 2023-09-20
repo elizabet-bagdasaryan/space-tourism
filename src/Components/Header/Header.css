@@ -110,7 +110,6 @@
 	}
 	.navbar div {
 		font-size: 18px;
-		padding-bottom: 10px;
 	}
 	.navbar div p:nth-child(1) {
 		display: block;
@@ -118,7 +117,34 @@
 		margin-right: 10px;
 	}
 
+	.navbar div {
+		background-image: linear-gradient(to right, #fff, #fff 50%, #d0d6f9 50%);
+		background-size: 200% 100%;
+		background-position: -100%;
+		padding: 5px 0;
+		position: relative;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		transition: all 0.3s ease-in-out;
+	}
+
+	.navbar div:before {
+		content: "";
+		background: #fff;
+		display: block;
+		position: absolute;
+		bottom: -3px;
+		left: 0;
+		width: 0;
+		height: 3px;
+		transition: all 0.3s ease-in-out;
+	}
+
 	.navbar div:hover {
-		border-bottom: 3px solid rgba(255, 255, 255, 0.507);
+		background-position: 0;
+	}
+
+	.navbar div:hover::before {
+		width: 100%;
 	}
 }
