@@ -105,13 +105,12 @@ function Crew() {
 						></div>
 					</div>
 				</div>
-				<div>
-					<img
-						src={`https://space-tourism-backend-production.up.railway.app${crewInfo?.images.png}`}
-						className="rez-tab"
-					></img>
-				</div>
+				{/* <div className="img-wrap"></div> */}
 			</div>
+			<img
+				src={`https://space-tourism-backend-production.up.railway.app${crewInfo?.images.png}`}
+				className="rez-tab"
+			></img>
 		</body>
 	);
 }

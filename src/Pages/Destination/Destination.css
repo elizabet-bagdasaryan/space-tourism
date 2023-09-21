@@ -113,7 +113,7 @@ hr {
 	.destination {
 		background-image: url(../../assets/destination-desk.jpg);
 		text-align: start;
-		height: 100%;
+		height: auto;
 	}
 
 	.text-dest {
@@ -152,6 +152,7 @@ hr {
 	}
 	.statistics {
 		justify-content: start;
+		margin-bottom: 10vh;
 	}
 	.statistics div {
 		margin: 30px 80px 0 0;
